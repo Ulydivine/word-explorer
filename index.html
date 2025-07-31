@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning Word Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌟 Word Explorer</h1>
+            <p class="subtitle">Discover, Learn, and Master New Words</p>
+        </header>
+
+        <main>
+            <section class="search-section">
+                <div class="search-container">
+                    <input type="text" id="wordInput" placeholder="Enter a word to explore..." autocomplete="off">
+                    <button id="searchBtn">🔍 Explore</button>
+                </div>
+                <div class="quick-actions">
+                    <button id="randomWordBtn" class="action-btn">🎲 Random Word</button>
+                    <button id="clearHistoryBtn" class="action-btn">🗑️ Clear History</button>
+                </div>
+            </section>
+
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="word-card" id="wordCard">
+                    <!-- Word details will be populated here -->
+                </div>
+            </section>
+
+            <section class="history-section">
+                <h3>📚 Recently Explored Words</h3>
+                <div class="history-container" id="historyContainer">
+                    <p class="no-history">No words explored yet. Start by searching for a word!</p>
+                </div>
+            </section>
+
+            <section class="favorites-section">
+                <h3>⭐ Favorite Words</h3>
+                <div class="favorites-container" id="favoritesContainer">
+                    <p class="no-favorites">No favorite words yet. Click the star icon on any word to add it to favorites!</p>
+                </div>
+            </section>
+        </main>
+
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Exploring word...</p>
+        </div>
+
+        <div class="error-message" id="errorMessage" style="display: none;">
+            <p id="errorText"></p>
+            <button id="closeError">✕</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Powered by <a href="https://dictionaryapi.dev/" target="_blank">Free Dictionary API</a></p>
+        <p>Created for Educational Purposes</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
